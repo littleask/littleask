@@ -13,10 +13,11 @@ class User(models.Model):
 	twname = models.CharField(max_length=30)	
 	qqname = models.CharField(max_length=30)	
 #other info
-	date_joined = models.DateTimeField('date joined')
+	joined_date = models.DateTimeField("date published")
 	ip = models.CharField(max_length=20)
 	isbanned = ((u'yes'), (u'no'))
 	level = models.CharField(max_length=20)
+	email = models.EmailField()
 
 	def __unicode__(self):
 		return self.uname
